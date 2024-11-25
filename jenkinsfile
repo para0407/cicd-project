@@ -1,13 +1,12 @@
 pipeline {
     agent any
-
     environment {
-        DOCKER_REGISTRY = ""
+        DOCKER_REGISTRY = "parasaran p"
         IMAGE_NAME = "my-app"
         KUBECONFIG = credentials('kubeconfig')  // Use K8s credentials from Jenkins
     }
 
-    stages {
+        stages {
         stage('Clone Repository') {
             steps {
                 git branch: 'main', url: 'https://github.com/Stark-Repo/k8s.git'
